@@ -17,6 +17,7 @@ backgroundLayer4.src = "./imgs/layer-4.png";
 const backgroundLayer5 = new Image();
 backgroundLayer5.src = "./imgs/layer-5.png";
 
+//creating an event listener for the window itself - that way only when window is loaded up, the background funcitonality will start working
 window.addEventListener("load", ()=>{
     class Layer {
         constructor(image, speedModifier) {
