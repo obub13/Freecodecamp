@@ -3,7 +3,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);  /*transform sets the ELEMENT to be centered, not having the transform:trasnlate attribute will only set the top-left corner of the element at center*/
     width: 600px;
     height: 600px;
 }
