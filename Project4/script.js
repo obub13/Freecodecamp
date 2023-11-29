@@ -31,9 +31,9 @@ class Explosion {
     }
   }
   draw() {
-    ctx.save(); //saves the canvas before rotating
-    ctx.translate(this.x, this.y);
-    ctx.rotate(this.angle);
+    ctx.save(); //saves the canvas before rotating (must be used in order to run smoothly with multiple clicks)
+    ctx.translate(this.x, this.y); //sets position of explosion on canvas
+    ctx.rotate(this.angle);  //rotates explosion by angle
     ctx.drawImage(
       this.image,
       this.spriteWidth * this.frame,
@@ -45,7 +45,7 @@ class Explosion {
       this.width,
       this.height
     );
-    ctx.restore();
+    ctx.restore(); //is used to restore the canvas to the saved state. This ensures that transformations applied to one element don't affect others.
   }
 }
 
